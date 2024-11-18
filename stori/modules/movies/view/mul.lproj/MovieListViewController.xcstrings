@@ -1,0 +1,24 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "CfG-hj-NZ5.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Movies\"; ObjectID = \"CfG-hj-NZ5\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Movies"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peliculas"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
