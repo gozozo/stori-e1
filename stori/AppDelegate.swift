@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  stori
 //
-//  Created by Personal on 17/11/24.
+//  Created by Luis Enrique Vazquez Escobar on 17/11/24.
 //
 
 import UIKit
@@ -78,4 +78,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-

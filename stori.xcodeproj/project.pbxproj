@@ -45,12 +45,13 @@
 		60D7E3C32CEAAE8300EB222E /* stori.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = stori.xcdatamodel; sourceTree = "<group>"; };
 		60D7E3C52CEAAE8500EB222E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60D7E3C82CEAAE8500EB222E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		60D7E3CA2CEAAE8500EB222E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60D7E3CF2CEAAE8600EB222E /* storiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = storiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D7E3D32CEAAE8600EB222E /* storiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storiTests.swift; sourceTree = "<group>"; };
 		60D7E3D92CEAAE8600EB222E /* storiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = storiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60D7E3DD2CEAAE8600EB222E /* storiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storiUITests.swift; sourceTree = "<group>"; };
 		60D7E3DF2CEAAE8600EB222E /* storiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		60D7E3EC2CEAB24900EB222E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		60D7E3EF2CEAB36600EB222E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +102,14 @@
 		60D7E3B82CEAAE8200EB222E /* stori */ = {
 			isa = PBXGroup;
 			children = (
+				60D7E3F22CEAB41500EB222E /* modules */,
 				60D7E3B92CEAAE8200EB222E /* AppDelegate.swift */,
 				60D7E3BB2CEAAE8200EB222E /* SceneDelegate.swift */,
 				60D7E3BD2CEAAE8200EB222E /* ViewController.swift */,
 				60D7E3BF2CEAAE8300EB222E /* Main.storyboard */,
 				60D7E3C52CEAAE8500EB222E /* Assets.xcassets */,
 				60D7E3C72CEAAE8500EB222E /* LaunchScreen.storyboard */,
-				60D7E3CA2CEAAE8500EB222E /* Info.plist */,
+				60D7E3ED2CEAB24900EB222E /* Info.plist */,
 				60D7E3C22CEAAE8300EB222E /* stori.xcdatamodeld */,
 			);
 			path = stori;
@@ -128,6 +130,29 @@
 				60D7E3DF2CEAAE8600EB222E /* storiUITestsLaunchTests.swift */,
 			);
 			path = storiUITests;
+			sourceTree = "<group>";
+		};
+		60D7E3F02CEAB3DF00EB222E /* home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		60D7E3F12CEAB3F700EB222E /* detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
+		60D7E3F22CEAB41500EB222E /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				60D7E3F12CEAB3F700EB222E /* detail */,
+				60D7E3F02CEAB3DF00EB222E /* home */,
+			);
+			path = modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +340,15 @@
 				60D7E3C82CEAAE8500EB222E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		60D7E3ED2CEAB24900EB222E /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60D7E3EC2CEAB24900EB222E /* Base */,
+				60D7E3EF2CEAB36600EB222E /* en */,
+			);
+			name = Info.plist;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

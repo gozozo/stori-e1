@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  stori
 //
-//  Created by Personal on 17/11/24.
+//  Created by Luis Enrique Vazquez Escobar on 17/11/24.
 //
 
 import UIKit
@@ -49,7 +49,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-
 }
-
