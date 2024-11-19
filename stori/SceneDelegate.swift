@@ -19,7 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
         window = UIWindow(windowScene: windowScene)
         let movieListViewController = MovieListRouter.createModule()
-        window?.rootViewController = UINavigationController(rootViewController: movieListViewController)
+        let navigation = UINavigationController(rootViewController: movieListViewController)
+        navigation.setNavigationBarHidden(true, animated: false)
+        window?.rootViewController = navigation
         window?.makeKeyAndVisible()
     }
 

@@ -2,19 +2,19 @@
   "sourceLanguage" : "en",
   "strings" : {
     "CfG-hj-NZ5.text" : {
-      "comment" : "Class = \"UILabel\"; text = \"Movies\"; ObjectID = \"CfG-hj-NZ5\";",
+      "comment" : "Class = \"UILabel\"; text = \"Top Rated\"; ObjectID = \"CfG-hj-NZ5\";",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Movies"
+            "value" : "Top Rated"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Peliculas"
+            "value" : "Lo mejor"
           }
         }
       }

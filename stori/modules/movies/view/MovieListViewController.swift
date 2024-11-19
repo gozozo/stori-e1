@@ -16,19 +16,26 @@ class MovieListViewController: UIViewController {
     
     var presenter: MovieListPresenterProtocol?
     
+    @IBOutlet private weak var containerTable: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
+        configureViews()
         configureNavigationBar()
         presenter?.fetchMovies()
     }
     
-    /// Configures the table view with necessary settings and properties.
-    /// This includes setting delegates, registering cells, and any other
-    /// configurations required for the table view to function properly.
-    private func configureTableView() {
+    /// Configures the views for the MovieListViewController.
+    ///
+    /// This method sets up the appearance and behavior of the views,
+    /// including the table view and other UI.
+    ///
+    private func configureViews() {
+        //Title
+        titleLabel.font = UIFont.H1
+        //Table
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieTableViewCell")
@@ -38,7 +45,7 @@ class MovieListViewController: UIViewController {
     /// This method sets up the appearance and behavior of the navigation bar,
     /// including title, buttons, and other navigation-related elements.
     private func configureNavigationBar() {
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }
 
@@ -79,6 +86,10 @@ extension MovieListViewController: UITableViewDataSource {
             cell.setImage(image: image ?? UIImage())
         })
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
 }
 

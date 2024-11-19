@@ -14,7 +14,11 @@ import UIKit
 class MovieTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var movieImageView: UIImageView!
-    @IBOutlet private weak var movieNameLabel: UILabel!
+    @IBOutlet private weak var movieNameLabel: UILabel! {
+        didSet {
+            movieNameLabel.font = UIFont.H2
+        }
+    }
     @IBOutlet private weak var movieReleaseDateLabel: UILabel!
     
     override func awakeFromNib() {

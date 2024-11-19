@@ -29,7 +29,14 @@ class ServiceManager {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: builtRequest(url: url)) { data, response, error in
+        let deviceLanguage = Locale.current.language.languageCode?.identifier ?? "en"
+        
+        let queryString: [String: Any] = [
+            "language": deviceLanguage,
+            "page": "1",
+        ]
+        
+        let task = URLSession.shared.dataTask(with: builtRequest(url: url, queryString: queryString)) { data, response, error in
             if let error = error {
                 completion(.failure(error))
                 return
@@ -81,11 +88,20 @@ class ServiceManager {
     
     // MARK: - Private Methods
     
-    /// Constructs a `URLRequest` object with the necessary headers.
-    private func builtRequest(url: URL) -> URLRequest {
+    /// Builds a `URLRequest` object with the specified URL and query
+    ///
+    /// - Parameters:
+    ///  - url: The URL for the request.
+    ///  - queryString: An optional dictionary of query parameters.
+    ///  - Returns: A `URLRequest` object.
+    private func builtRequest(url: URL, queryString:[String: Any]?) -> URLRequest {
         
-        var request = URLRequest(url: url)
+        var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        components?.queryItems = queryString?.map { (key, value) in
+            URLQueryItem(name: key, value: String(describing: value))
+        }
         
+        var request = URLRequest(url: components?.url ?? url)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")

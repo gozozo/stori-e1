@@ -10,15 +10,7 @@ import CoreData
 
 class MovieListInteractor: MovieListInteractorProtocol {
     var presenter: MovieListPresenterProtocol?
-    var managedContext: NSManagedObjectContext?
-    
     let serviceManager = ServiceManager.shared
-    
-    init() {
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-            self.managedContext = appDelegate.persistentContainer.viewContext
-        }
-    }
     
     func fetchMovies() {
         serviceManager.fetchMovies { [weak self] result in
