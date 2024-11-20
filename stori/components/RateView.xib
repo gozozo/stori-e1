@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RateView" customModule="stori" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="tkb-pt-VL5"/>
+                <outlet property="progressRate" destination="bkU-XA-OTT" id="4ai-C6-dXL"/>
+                <outlet property="rateLabel" destination="AI2-qf-ftO" id="EhG-kB-Nzc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="36"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AI2-qf-ftO">
+                    <rect key="frame" x="225" y="0.0" width="25" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="TY5-wV-tYV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bkU-XA-OTT">
+                    <rect key="frame" x="0.0" y="15.666666666666664" width="225" height="5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="b6l-yE-8kL"/>
+                    </constraints>
+                    <color key="progressTintColor" name="700"/>
+                    <color key="trackTintColor" name="400"/>
+                </progressView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="AI2-qf-ftO" secondAttribute="trailing" id="AN0-J7-9r3"/>
+                <constraint firstItem="bkU-XA-OTT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BFv-hU-njT"/>
+                <constraint firstAttribute="bottom" secondItem="AI2-qf-ftO" secondAttribute="bottom" id="N7s-kD-hIh"/>
+                <constraint firstItem="AI2-qf-ftO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aA1-k2-fRf"/>
+                <constraint firstItem="AI2-qf-ftO" firstAttribute="centerY" secondItem="bkU-XA-OTT" secondAttribute="centerY" id="qkd-wl-pAK"/>
+                <constraint firstItem="AI2-qf-ftO" firstAttribute="leading" secondItem="bkU-XA-OTT" secondAttribute="trailing" id="sc2-Gj-t5I"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-175.57251908396947" y="116.19718309859155"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="400">
+            <color red="0.70196078431372544" green="0.76862745098039209" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="700">
+            <color red="0.40000000000000002" green="0.53725490196078429" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

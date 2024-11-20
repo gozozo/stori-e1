@@ -27,24 +27,13 @@
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tPk-Jo-qlt">
-                    <rect key="frame" x="102.66666666666667" y="60.666666666666664" width="240.33333333333331" height="4.9999999999999929"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aeq-XX-Xqz" customClass="RateView" customModule="stori" customModuleProvider="target">
+                    <rect key="frame" x="102.66666666666666" y="55" width="273.33333333333337" height="16"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="5" id="g0X-8p-RfU"/>
+                        <constraint firstAttribute="height" constant="16" id="2bh-me-vJY"/>
                     </constraints>
-                    <color key="progressTintColor" name="700"/>
-                    <color key="trackTintColor" name="400"/>
-                </progressView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0z-av-4yW">
-                    <rect key="frame" x="351" y="55" width="25" height="16"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="16" id="Lta-3G-IvC"/>
-                        <constraint firstAttribute="width" constant="25" id="mos-Ie-1nz"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nov, 1994" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncm-sE-roO">
                     <rect key="frame" x="130.66666666666666" y="116.66666666666667" width="56" height="15.000000000000014"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
@@ -84,28 +73,26 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="0xp-23-w20" firstAttribute="top" secondItem="W0z-av-4yW" secondAttribute="bottom" id="2kg-ag-4gu"/>
+                <constraint firstItem="0xp-23-w20" firstAttribute="top" secondItem="aeq-XX-Xqz" secondAttribute="bottom" id="2de-Ou-fzj"/>
                 <constraint firstItem="OcX-nn-OGz" firstAttribute="top" secondItem="0xp-23-w20" secondAttribute="bottom" id="4Eu-xh-VZx"/>
                 <constraint firstAttribute="trailing" secondItem="0xp-23-w20" secondAttribute="trailing" constant="16" id="4XY-c3-zfh"/>
                 <constraint firstItem="Qb9-S7-hUh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="4wD-SV-ZkF"/>
-                <constraint firstItem="W0z-av-4yW" firstAttribute="leading" secondItem="tPk-Jo-qlt" secondAttribute="trailing" constant="8" id="6Gq-mv-yfm"/>
                 <constraint firstItem="Fga-gT-Kxt" firstAttribute="leading" secondItem="iAx-an-dGs" secondAttribute="trailing" constant="8" id="7Jt-vA-Idz"/>
-                <constraint firstItem="tPk-Jo-qlt" firstAttribute="leading" secondItem="Qb9-S7-hUh" secondAttribute="trailing" constant="8" id="7MC-cE-C4D"/>
                 <constraint firstItem="OcX-nn-OGz" firstAttribute="bottom" secondItem="Qb9-S7-hUh" secondAttribute="bottom" id="8qU-DV-LJn"/>
                 <constraint firstItem="LkW-Wz-v26" firstAttribute="top" secondItem="Qb9-S7-hUh" secondAttribute="top" constant="8" id="I8C-pd-hVI"/>
-                <constraint firstAttribute="trailing" secondItem="W0z-av-4yW" secondAttribute="trailing" constant="16" id="L8h-DY-O17"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aeq-XX-Xqz" secondAttribute="trailing" constant="16" id="JKg-Qy-vay"/>
                 <constraint firstItem="Fga-gT-Kxt" firstAttribute="centerY" secondItem="iAx-an-dGs" secondAttribute="centerY" id="TsS-a9-2WN"/>
                 <constraint firstAttribute="trailing" secondItem="LkW-Wz-v26" secondAttribute="trailing" constant="24" id="V6r-q5-j8l"/>
                 <constraint firstAttribute="trailing" secondItem="Fga-gT-Kxt" secondAttribute="trailing" constant="16" id="Wss-rl-3rl"/>
                 <constraint firstItem="iAx-an-dGs" firstAttribute="bottom" secondItem="Qb9-S7-hUh" secondAttribute="bottom" id="bGt-hi-xPW"/>
                 <constraint firstItem="0xp-23-w20" firstAttribute="leading" secondItem="Qb9-S7-hUh" secondAttribute="trailing" constant="8" id="cHf-f3-n5z"/>
                 <constraint firstItem="LkW-Wz-v26" firstAttribute="leading" secondItem="Qb9-S7-hUh" secondAttribute="trailing" constant="8" id="dqb-1y-9ry"/>
-                <constraint firstItem="W0z-av-4yW" firstAttribute="top" secondItem="LkW-Wz-v26" secondAttribute="bottom" constant="8" id="lXy-L9-j8s"/>
-                <constraint firstItem="tPk-Jo-qlt" firstAttribute="centerY" secondItem="W0z-av-4yW" secondAttribute="centerY" id="mfX-Ow-FH7"/>
+                <constraint firstItem="aeq-XX-Xqz" firstAttribute="top" secondItem="LkW-Wz-v26" secondAttribute="bottom" constant="8" symbolic="YES" id="kFG-6v-BBj"/>
                 <constraint firstItem="Qb9-S7-hUh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="nKb-fr-ZmL"/>
                 <constraint firstItem="OcX-nn-OGz" firstAttribute="leading" secondItem="Qb9-S7-hUh" secondAttribute="trailing" constant="8" id="r4p-rX-UgZ"/>
                 <constraint firstItem="ncm-sE-roO" firstAttribute="leading" secondItem="OcX-nn-OGz" secondAttribute="trailing" constant="8" id="rnY-pD-SJP"/>
                 <constraint firstItem="ncm-sE-roO" firstAttribute="centerY" secondItem="OcX-nn-OGz" secondAttribute="centerY" id="t13-v4-bjf"/>
+                <constraint firstItem="aeq-XX-Xqz" firstAttribute="leading" secondItem="Qb9-S7-hUh" secondAttribute="trailing" constant="8" id="ufz-ZQ-Rih"/>
                 <constraint firstAttribute="bottom" secondItem="Qb9-S7-hUh" secondAttribute="bottom" constant="16" id="zaY-H9-inA"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
@@ -115,8 +102,7 @@
                 <outlet property="movieDescriptionLabel" destination="0xp-23-w20" id="2If-dU-GPX"/>
                 <outlet property="movieImageView" destination="Qb9-S7-hUh" id="0Uq-Ig-d7A"/>
                 <outlet property="movieNameLabel" destination="LkW-Wz-v26" id="OPI-Vv-JIj"/>
-                <outlet property="movieProgressBar" destination="tPk-Jo-qlt" id="L6H-bk-GLo"/>
-                <outlet property="movieRateLabel" destination="W0z-av-4yW" id="BXp-Is-2n5"/>
+                <outlet property="movieRateView" destination="aeq-XX-Xqz" id="OgJ-wJ-EXo"/>
                 <outlet property="movieReleaseDateLabel" destination="ncm-sE-roO" id="9S9-7P-vkH"/>
                 <outlet property="movieVoteLabel" destination="Fga-gT-Kxt" id="USc-dA-XYd"/>
             </connections>
@@ -128,9 +114,6 @@
         <image name="hand.thumbsup" catalog="system" width="123" height="128"/>
         <namedColor name="400">
             <color red="0.70196078431372544" green="0.76862745098039209" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="700">
-            <color red="0.40000000000000002" green="0.53725490196078429" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

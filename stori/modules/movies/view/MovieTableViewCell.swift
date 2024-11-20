@@ -19,12 +19,8 @@ class MovieTableViewCell: UITableViewCell {
             movieImageView.contentMode = .scaleAspectFill
         }
     }
-    @IBOutlet private weak var movieProgressBar: UIProgressView!
-    @IBOutlet private weak var movieRateLabel: UILabel! {
-        didSet {
-            movieRateLabel.font = UIFont.lightText
-        }
-    }
+    @IBOutlet private weak var movieRateView: RateView!
+
     @IBOutlet private weak var movieNameLabel: UILabel! {
         didSet {
             movieNameLabel.font = UIFont.H2
@@ -65,11 +61,9 @@ class MovieTableViewCell: UITableViewCell {
         movieReleaseDateLabel.text = movie.releaseDate
         movieImageView.image = UIImage(systemName: "photo")
         let progress: Float = Float(round((movie.voteAverage / 10) * 100) / 100)
-        movieRateLabel.text = progress == 0 ? "--" : "\(String(format: "%.1f", progress * 10))"
-
+        movieRateView.progress = progress
         movieVoteLabel.text = "\(movie.voteCount)"
         movieDescriptionLabel.text = movie.overview
-        movieProgressBar.setProgress(progress, animated: true)
 
         let inputFormatter = DateFormatter()
         inputFormatter.dateFormat = "yyyy-MM-dd"
