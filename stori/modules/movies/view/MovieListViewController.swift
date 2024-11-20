@@ -79,10 +79,7 @@ extension MovieListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.configure(with: movie)
-        guard let imagePath = movie.posterPath else {
-            return cell
-        }
-        presenter?.fetchImageMovie(for: imagePath, completion: { image in
+        presenter?.fetchImageMovie(for: movie.posterPath, completion: { image in
             cell.setImage(image: image ?? UIImage())
         })
         return cell

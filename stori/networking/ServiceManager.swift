@@ -46,13 +46,10 @@ class ServiceManager {
                 completion(.failure(NSError(domain: "No data", code: 0, userInfo: nil)))
                 return
             }
-            
-            do {
-                let movies = try JSONDecoder().decode(MoviesResponse.self, from: data)
-                completion(.success(movies))
-            } catch {
-                completion(.failure(error))
-            }
+
+            let movies = try! JSONDecoder().decode(MoviesResponse.self, from: data)
+            completion(.success(movies))
+
         }
         
         task.resume()
@@ -70,7 +67,7 @@ class ServiceManager {
     /// - Note: The image is fetched using a URL constructed by `ApiService.getImagesURL(size:path:)`.
     ///
     func fetchImage(resource: String, completion: @escaping (UIImage?) -> Void) {
-        guard let url = ApiService.getImagesURL(size: "/w500", path: resource) else {
+        guard let url = ApiService.getImagesURL(size: "/w200", path: resource) else {
             completion(nil)
             return
         }
