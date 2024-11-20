@@ -12,20 +12,51 @@ import UIKit
 ///
 /// - Note: Ensure that this cell is registered with the table view before use.
 class MovieTableViewCell: UITableViewCell {
-    
-    @IBOutlet private weak var movieImageView: UIImageView!
+
+    @IBOutlet private weak var movieImageView: UIImageView! {
+        didSet {
+            movieImageView.layer.cornerRadius = 4
+            movieImageView.contentMode = .scaleAspectFill
+        }
+    }
+    @IBOutlet private weak var movieProgressBar: UIProgressView!
+    @IBOutlet private weak var movieRateLabel: UILabel! {
+        didSet {
+            movieRateLabel.font = UIFont.lightText
+        }
+    }
     @IBOutlet private weak var movieNameLabel: UILabel! {
         didSet {
             movieNameLabel.font = UIFont.H2
         }
     }
-    @IBOutlet private weak var movieReleaseDateLabel: UILabel!
-    
+    @IBOutlet private weak var movieReleaseDateLabel: UILabel! {
+        didSet {
+            movieReleaseDateLabel.font = UIFont.lightText
+        }
+    }
+    @IBOutlet private weak var movieVoteLabel: UILabel! {
+        didSet {
+            movieVoteLabel.font = UIFont.lightText
+        }
+    }
+    @IBOutlet weak var movieDescriptionLabel: UILabel! {
+        didSet {
+            movieDescriptionLabel.font = UIFont.bodyText
+        }
+    }
+
+    private static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM, yyyy"
+        return formatter
+    }()
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.accessoryType = .disclosureIndicator
+        self.accessoryType = .none
     }
-    
+
     /// Configures the cell with the provided movie information.
     ///
     /// - Parameter movie: The `Movie` object containing the details to be displayed in the cell.
@@ -33,8 +64,23 @@ class MovieTableViewCell: UITableViewCell {
         movieNameLabel.text = movie.title
         movieReleaseDateLabel.text = movie.releaseDate
         movieImageView.image = UIImage(systemName: "photo")
+        let progress: Float = Float(round((movie.voteAverage / 10) * 100) / 100)
+        movieRateLabel.text = progress == 0 ? "--" : "\(String(format: "%.1f", progress * 10))"
+
+        movieVoteLabel.text = "\(movie.voteCount)"
+        movieDescriptionLabel.text = movie.overview
+        movieProgressBar.setProgress(progress, animated: true)
+
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd"
+
+        if let date = inputFormatter.date(from: movie.releaseDate) {
+            movieReleaseDateLabel.text = MovieTableViewCell.dateFormatter.string(from: date)
+        } else {
+            movieReleaseDateLabel.text = "No disponible"
+        }
     }
-    
+
     /// Sets the image of the cell to the provided image.
     ///
     /// - Parameter image: The image to be displayed in the cell.

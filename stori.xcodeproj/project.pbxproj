@@ -30,6 +30,12 @@
 		60FA86212CEBD3170026B083 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FA86202CEBD3170026B083 /* ApiService.swift */; };
 		60FA86252CEC0DAE0026B083 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 60FA86242CEC0DAE0026B083 /* Localizable.xcstrings */; };
 		60FD02222CEC2358005C6B03 /* UIFont+CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FD02212CEC2358005C6B03 /* UIFont+CustomFonts.swift */; };
+		FD73BB552CEDBA3400654693 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60FD02272CEC23D2005C6B03 /* Roboto-Black.ttf */; };
+		FD73BB562CEDBA3400654693 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60FD02262CEC23D2005C6B03 /* Roboto-Medium.ttf */; };
+		FD73BB572CEDBA3400654693 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60FD02282CEC23D2005C6B03 /* Roboto-Regular.ttf */; };
+		FD73BB582CEDBA3400654693 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60FD02232CEC23D1005C6B03 /* Roboto-Thin.ttf */; };
+		FD73BB592CEDBA3400654693 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60FD02292CEC241B005C6B03 /* Roboto-Bold.ttf */; };
+		FD73BB5A2CEDBA3400654693 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60FD02242CEC23D2005C6B03 /* Roboto-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -355,6 +361,12 @@
 			files = (
 				60FA861F2CEBD1380026B083 /* .env in Resources */,
 				60D7E3C62CEAAE8500EB222E /* Assets.xcassets in Resources */,
+				FD73BB552CEDBA3400654693 /* Roboto-Black.ttf in Resources */,
+				FD73BB562CEDBA3400654693 /* Roboto-Medium.ttf in Resources */,
+				FD73BB572CEDBA3400654693 /* Roboto-Regular.ttf in Resources */,
+				FD73BB582CEDBA3400654693 /* Roboto-Thin.ttf in Resources */,
+				FD73BB592CEDBA3400654693 /* Roboto-Bold.ttf in Resources */,
+				FD73BB5A2CEDBA3400654693 /* Roboto-Light.ttf in Resources */,
 				60FA861A2CEBCD420026B083 /* MovieListViewController.xib in Resources */,
 				60D7E3C92CEAAE8500EB222E /* Base in Resources */,
 				60FA86252CEC0DAE0026B083 /* Localizable.xcstrings in Resources */,
