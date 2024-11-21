@@ -36,6 +36,7 @@ class MovieListViewController: UIViewController {
         //Title
         titleLabel.font = UIFont.H1
         //Table
+        tableView.accessibilityIdentifier = "moviesTable"
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "MovieTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieTableViewCell")

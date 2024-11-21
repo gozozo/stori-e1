@@ -76,6 +76,10 @@ protocol MovieDetailViewProtocol: AnyObject {
     /// Displays the poster image for a movie.
     /// - Parameter image: The UIImage object representing the poster image.
     func displayPosterImage(_ image: UIImage?)
+
+    /// Displays an error message to the user.
+    /// - Parameter message: A string containing the error message to be shown.
+    func showError(message: String)
 }
 
 // MARK: - Router Protocols

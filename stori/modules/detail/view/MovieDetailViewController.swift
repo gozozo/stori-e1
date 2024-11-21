@@ -112,4 +112,12 @@ extension MovieDetailViewController: MovieDetailViewProtocol {
         DispatchQueue.main.async {  [weak self] in
             self?.backdropImageView.image = image}
     }
+
+    func showError(message: String) {
+        DispatchQueue.main.async { [weak self] in
+            let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self?.present(alert, animated: true, completion: nil)
+        }
+    }
 }

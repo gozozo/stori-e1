@@ -80,7 +80,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xm9-L9-5db">
                     <rect key="frame" x="0.0" y="119" width="393" height="699"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mCh-pl-RlO" userLabel="Table">
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mCh-pl-RlO" userLabel="Movies Table">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="699"/>
                             <color key="backgroundColor" red="0.98186905689265258" green="0.98640179266948946" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                         </tableView>

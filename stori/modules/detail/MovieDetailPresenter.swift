@@ -31,7 +31,7 @@ extension MovieDetailPresenter: MovieDetailPresenterProtocol {
     }
 
     func movieFetchFailed(error: any Error) {
-        // TODO: Handle error
+        view?.showError(message: error.localizedDescription)
     }
 
     func viewDidLoad() {

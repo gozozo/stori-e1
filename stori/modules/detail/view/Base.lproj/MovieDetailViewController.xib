@@ -183,6 +183,7 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brK-MD-msQ">
                             <rect key="frame" x="8" y="16" width="345" height="24"/>
+                            <accessibility key="accessibilityConfiguration" identifier="movieOverview"/>
                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
                             <nil key="highlightedColor"/>
                         </label>

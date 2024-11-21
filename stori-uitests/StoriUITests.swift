@@ -22,12 +22,23 @@ final class StoriUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testAplication() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+        let table = app.tables["moviesTable"]
+        XCTAssertTrue(table.exists, "The table view does not exist")
+
+        let firstCell = table.cells.element(boundBy: 0)
+        XCTAssertTrue(firstCell.exists, "The first cell does not exist")
+
+        firstCell.tap()
+
+        let movieOverviewLabel = app.staticTexts["movieOverview"]
+        XCTAssertTrue(movieOverviewLabel.exists, "The movie overview label does not exist")
     }
 
     func testLaunchPerformance() throws {
