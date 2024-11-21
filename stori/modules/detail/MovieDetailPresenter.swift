@@ -5,8 +5,10 @@
 //  Created by Luis Enrique Vazquez Escobar on 20/11/24.
 //
 
+import UIKit
+
 class MovieDetailPresenter {
-    var movie: Movie
+    private var movie: Movie
 
     weak var view: MovieDetailViewProtocol?
     var interactor: MovieDetailInteractorProtocol?
@@ -18,6 +20,20 @@ class MovieDetailPresenter {
 }
 
 extension MovieDetailPresenter: MovieDetailPresenterProtocol {
+    
+    func fetchFullDetail() {
+        interactor?.fetchFullMovieDetail(for: movie.id)
+    }
+
+    func movieFetched(movie: Movie) {
+        self.movie = movie
+        view?.reloadData()
+    }
+
+    func movieFetchFailed(error: any Error) {
+        // TODO: Handle error
+    }
+
     func viewDidLoad() {
         interactor?.fetchImage(from: movie.backdropPath, completion: { [weak self] image in
             self?.view?.displayBackdropImage(image)
@@ -28,7 +44,13 @@ extension MovieDetailPresenter: MovieDetailPresenterProtocol {
         })
     }
 
-    func getTitle() -> String {
-        return movie.title
+    func getMovie() -> Movie {
+        return movie
+    }
+
+    func back() {
+        if let view: UIViewController = view as? UIViewController {
+            router?.back(view: view)
+        }
     }
 }

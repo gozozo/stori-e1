@@ -41,7 +41,6 @@
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEQ-fd-Fq1" userLabel="Vote Date View" customClass="VotesDateView" customModule="stori" customModuleProvider="target">
                     <rect key="frame" x="102.66666666666666" y="114" width="273.33333333333337" height="20"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="fZe-vw-FDV"/>
                     </constraints>

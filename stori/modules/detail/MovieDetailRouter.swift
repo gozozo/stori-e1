@@ -24,5 +24,8 @@ class MovieDetailRouter: MovieDetailRouterProtocol {
         
         return view
     }
-}
 
+    func back(view: UIViewController?) {
+        view?.navigationController?.popViewController(animated: true)
+    }
+}

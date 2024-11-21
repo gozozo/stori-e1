@@ -13,6 +13,17 @@ class MovieDetailInteractor {
 }
 
 extension MovieDetailInteractor: MovieDetailInteractorProtocol {
+    func fetchFullMovieDetail(for movieId: Int) {
+        serviceManager.fetchMovie(for: movieId) { [weak self] result in
+            switch result {
+            case .success(let movie):
+                self?.presenter?.movieFetched(movie: movie)
+            case .failure(let error):
+                self?.presenter?.movieFetchFailed(error: error)
+            }
+        }
+    }
+    
     func fetchImage(from resource: String, completion: @escaping (UIImage?) -> Void) {
         serviceManager.fetchImage(resource: resource, completion: completion)
     }

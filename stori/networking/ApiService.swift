@@ -17,12 +17,15 @@ struct ApiService {
     // Enum to define all available API endpoints
     enum Endpoint {
         case topRatedMovies
-        
+        case movie(id: Int)
+
         // Construct the path for each endpoint
         var path: String {
             switch self {
             case .topRatedMovies:
                 return "/movie/top_rated"
+            case .movie(let id):            
+                return "/movie/\(id)"
             }
         }
     }

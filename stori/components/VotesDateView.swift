@@ -10,18 +10,20 @@ import UIKit
 @IBDesignable
 class VotesDateView: UIView {
 
-    @IBOutlet var contentView: UIView!
-    @IBOutlet weak var dateLabel: UILabel! {
+    // MARK: - IBOutlet
+    @IBOutlet private var contentView: UIView!
+    @IBOutlet private weak var dateLabel: UILabel! {
         didSet {
             dateLabel.font = UIFont.lightText
         }
     }
-    @IBOutlet weak var votesLabel: UILabel!  {
+    @IBOutlet private weak var votesLabel: UILabel!  {
         didSet {
             votesLabel.font = UIFont.lightText
         }
     }
 
+    // MARK: - IBInspectable
     @IBInspectable var textColor: UIColor {
         get { dateLabel.textColor }
         set {
@@ -29,8 +31,7 @@ class VotesDateView: UIView {
             votesLabel.textColor = newValue
         }
     }
-
-    // MARK: - IBInspectable
+    
     @IBInspectable var date: String {
         get { dateLabel.text ?? "" }
         set { dateLabel.text = newValue }

@@ -11,9 +11,9 @@ import UIKit
 class RateView: UIView {
 
     // MARK: - IBOutlet
-    @IBOutlet var contentView: UIView!
-    @IBOutlet weak var progressRate: UIProgressView!
-    @IBOutlet weak var rateLabel: UILabel! {
+    @IBOutlet private var contentView: UIView!
+    @IBOutlet private weak var progressRate: UIProgressView!
+    @IBOutlet private weak var rateLabel: UILabel! {
         didSet {
             rateLabel.font = UIFont.lightText
         }
