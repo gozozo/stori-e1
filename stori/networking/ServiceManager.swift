@@ -17,11 +17,12 @@ class ServiceManager {
 
     /// Fetches a list of movies from the service.
     ///
+    /// - Parameter page: The page number to fetch.
     /// - Parameter completion: A closure that gets called with the result of the fetch operation.
     ///   The closure takes a `Result` containing either an array of `Movie` objects or an `Error`.
     ///
     /// - Returns: Void
-    func fetchMovies(completion: @escaping (Result<MoviesResponse, Error>) -> Void) {
+    func fetchMovies(page: Int, completion: @escaping (Result<MoviesResponse, Error>) -> Void) {
         guard let url = ApiService.getFullURL(for: .topRatedMovies) else {
             completion(.failure(NSError(domain: "Invalid URL", code: 0, userInfo: nil)))
             return
@@ -30,7 +31,7 @@ class ServiceManager {
         let deviceLanguage = Locale.current.language.languageCode?.identifier ?? "en"
         let queryString: [String: Any] = [
             "language": deviceLanguage,
-            "page": "1"
+            "page": page
         ]
         let task = URLSession.shared.dataTask(with: builtRequest(url: url, queryString: queryString)) { data, response, error in
             if let error = error {

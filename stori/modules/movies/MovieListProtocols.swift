@@ -18,7 +18,8 @@ protocol MovieListInteractorProtocol {
     /// movie information, which may involve network requests, database
     /// queries, or other forms of data fetching. The exact implementation
     /// details will depend on the conforming type.
-    func fetchMovies()
+    /// - Parameter page: The page number to fetch.
+    func fetchMovies(page: Int)
 
     /// Fetches an image from the specified URL.
     /// - Parameters:
@@ -50,9 +51,9 @@ protocol MovieListPresenterProtocol: AnyObject {
     func fetchImageMovie(for resource: String, completion: @escaping (UIImage?) -> Void)
 
     /// Notifies that the movies have been fetched successfully.
-    /// - Parameter movies: An array of `Movie` objects that have been fetched.
-    func moviesFetched(movies: [Movie])
-    
+    /// - Parameter moviesResponse: The response containing the list of movies.
+    func moviesFetched(moviesResponse: MoviesResponse)
+
     /// This function is called when fetching movies fails.
     /// - Parameter error: The error that occurred during the fetch operation.
     func moviesFetchFailed(error: Error)

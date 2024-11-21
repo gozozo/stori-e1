@@ -12,11 +12,11 @@ class MovieListInteractor: MovieListInteractorProtocol {
     var presenter: MovieListPresenterProtocol?
     let serviceManager = ServiceManager.shared
     
-    func fetchMovies() {
-        serviceManager.fetchMovies { [weak self] result in
+    func fetchMovies(page: Int) {
+        serviceManager.fetchMovies(page: page) { [weak self] result in
             switch result {
             case .success(let moviesResponse):
-                self?.presenter?.moviesFetched(movies: moviesResponse.results)
+                self?.presenter?.moviesFetched(moviesResponse: moviesResponse)
             case .failure(let error):
                 self?.presenter?.moviesFetchFailed(error: error)
             }
