@@ -27,5 +27,9 @@ extension UIFont {
     static var lightText: UIFont {
         return UIFont(name: "Roboto-Light", size: 12) ?? UIFont.systemFont(ofSize: 12, weight: .light)
     }
+
+    static var tagline: UIFont {
+        return UIFont(name: "Roboto-ThinItalic", size: 18) ?? UIFont.systemFont(ofSize: 18, weight: .thin)
+    }
 }
 

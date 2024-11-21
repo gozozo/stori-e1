@@ -10,6 +10,7 @@ import UIKit
 @IBDesignable
 class RateView: UIView {
 
+    // MARK: - IBOutlet
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var progressRate: UIProgressView!
     @IBOutlet weak var rateLabel: UILabel! {
@@ -18,11 +19,18 @@ class RateView: UIView {
         }
     }
 
+    // MARK: - IBInspectable
     @IBInspectable var progress: Float {
         get { progressRate.progress }
         set {
             progressRate.progress = newValue
             rateLabel.text = newValue == 0 ? "--" : "\(String(format: "%.1f", newValue * 10))"
+        }
+    }
+    @IBInspectable var textColor: UIColor {
+        get { rateLabel.textColor }
+        set {
+            rateLabel.textColor = newValue
         }
     }
 
@@ -38,9 +46,8 @@ class RateView: UIView {
     }
 
     private func commonInit() {
-
         UINib(nibName: "RateView", bundle: Bundle(for: RateView.self)).instantiate(withOwner: self, options: nil)
-        addSubview(contentView)
+        self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }

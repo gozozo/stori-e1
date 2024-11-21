@@ -11,7 +11,7 @@ import UIKit
 protocol MovieListInteractorProtocol {
 
     var presenter: MovieListPresenterProtocol? { get set }
-    
+
     /// Fetches the list of movies from the data source.
     ///
     /// This method is responsible for initiating the process of retrieving
@@ -19,7 +19,7 @@ protocol MovieListInteractorProtocol {
     /// queries, or other forms of data fetching. The exact implementation
     /// details will depend on the conforming type.
     func fetchMovies()
-    
+
     /// Fetches an image from the specified URL.
     /// - Parameters:
     ///   - resource: The resource from which to fetch the image
@@ -33,7 +33,7 @@ protocol MovieListPresenterProtocol: AnyObject {
     var view: MovieListViewProtocol? { get set }
     var interactor: MovieListInteractorProtocol? { get set }
     var router: MovieListRouterProtocol? { get set }
-    
+
     /// Fetches the list of movies.
     ///
     /// This method is responsible for initiating the process of retrieving
@@ -41,7 +41,7 @@ protocol MovieListPresenterProtocol: AnyObject {
     /// or other data sources. The implementation details are defined in the
     /// conforming types.
     func fetchMovies()
-    
+
     /// Fetches the image for a given movie resource.
     /// 
     /// - Parameters:
@@ -89,8 +89,7 @@ protocol MovieListViewProtocol: AnyObject {
 }
 
 // MARK: - Router Protocols
-protocol MovieListRouterProtocol{
-
+protocol MovieListRouterProtocol {
     /// Creates and returns a new instance of the module's main view controller.
     ///
     /// - Returns: A `UIViewController` instance representing the main view of the module.

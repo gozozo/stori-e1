@@ -20,22 +20,14 @@ class MovieTableViewCell: UITableViewCell {
         }
     }
     @IBOutlet private weak var movieRateView: RateView!
+    @IBOutlet private weak var movieVotesDateView: VotesDateView!
 
     @IBOutlet private weak var movieNameLabel: UILabel! {
         didSet {
             movieNameLabel.font = UIFont.H2
         }
     }
-    @IBOutlet private weak var movieReleaseDateLabel: UILabel! {
-        didSet {
-            movieReleaseDateLabel.font = UIFont.lightText
-        }
-    }
-    @IBOutlet private weak var movieVoteLabel: UILabel! {
-        didSet {
-            movieVoteLabel.font = UIFont.lightText
-        }
-    }
+  
     @IBOutlet weak var movieDescriptionLabel: UILabel! {
         didSet {
             movieDescriptionLabel.font = UIFont.bodyText
@@ -58,20 +50,19 @@ class MovieTableViewCell: UITableViewCell {
     /// - Parameter movie: The `Movie` object containing the details to be displayed in the cell.
     func configure(with movie: Movie) {
         movieNameLabel.text = movie.title
-        movieReleaseDateLabel.text = movie.releaseDate
+
         movieImageView.image = UIImage(systemName: "photo")
         let progress: Float = Float(round((movie.voteAverage / 10) * 100) / 100)
         movieRateView.progress = progress
-        movieVoteLabel.text = "\(movie.voteCount)"
         movieDescriptionLabel.text = movie.overview
 
+        movieVotesDateView.votes = "\(movie.voteCount)"
         let inputFormatter = DateFormatter()
         inputFormatter.dateFormat = "yyyy-MM-dd"
-
         if let date = inputFormatter.date(from: movie.releaseDate) {
-            movieReleaseDateLabel.text = MovieTableViewCell.dateFormatter.string(from: date)
+            movieVotesDateView.date = MovieTableViewCell.dateFormatter.string(from: date)
         } else {
-            movieReleaseDateLabel.text = "No disponible"
+            movieVotesDateView.date = "--"
         }
     }
 
