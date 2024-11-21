@@ -23,6 +23,13 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet private weak var rateView: RateView!
     @IBOutlet private weak var votesDateView: VotesDateView!
     @IBOutlet private weak var taglineLabel: UILabel!
+    @IBOutlet private weak var containerRegionView: UIView!
+    @IBOutlet private weak var regionLabel: UILabel!
+    @IBOutlet private weak var overviewLabel: UILabel!
+    @IBOutlet private weak var statusLabel: UILabel!
+    @IBOutlet private weak var budgetLabel: UILabel!
+    @IBOutlet private weak var originalLanguageLabel: UILabel!
+    @IBOutlet private weak var revenueLabel: UILabel!
 
     // MARK: - IBAction
     @IBAction func back(_ sender: Any) {
@@ -33,12 +40,22 @@ class MovieDetailViewController: UIViewController {
         super.viewDidLoad()
         presenter?.fetchFullDetail()
         presenter?.viewDidLoad()
+        configureUI()
         configure()
+
     }
 
-    /**
-     Configures the view controller with necessary setup.
-     */
+    /// Configures the UI elements with the appropriate fonts.
+    private func configureUI() {
+        titleLabel.font = UIFont.H1
+        taglineLabel.font = UIFont.tagline
+        regionLabel.font = UIFont.H2
+        overviewLabel.font = UIFont.bodyText
+        containerRegionView.layer.borderWidth = 2
+        containerRegionView.layer.borderColor = UIColor(named: "900")?.cgColor
+    }
+
+    /// Configures the view controller with necessary setup.
     private func configure() {
         if let movie = presenter?.getMovie(){
 
@@ -55,11 +72,25 @@ class MovieDetailViewController: UIViewController {
             }
 
             titleLabel.text = movie.title
-            taglineLabel.text = ((movie.tagline?.isEmpty) != nil) ? "\"...\"" :  movie.tagline
+            taglineLabel.text = (movie.tagline == nil || movie.tagline == "") ? "\"...\"" :  movie.tagline
+            regionLabel.text = movie.productionCountries?.first?.iso31661 ?? "--"
+            overviewLabel.text = movie.overview
+            statusLabel.text = movie.status
+            budgetLabel.text = movie.budget == 0 ? "--" : "$ \(formatNumberWithCommas(movie.budget))"
+            originalLanguageLabel.text = movie.originalLanguage.uppercased()
+            revenueLabel.text = movie.revenue == 0 ? "--" : "$ \(formatNumberWithCommas(movie.revenue))"
+        }
+    }
+
+    private func formatNumberWithCommas(_ number: Int?) -> String {
+        if let number = number{
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            return formatter.string(from: NSNumber(value: number)) ?? "\(number)"
+        } else {
+            return "--"
         }
 
-        titleLabel.font = UIFont.H1
-        taglineLabel.font = UIFont.tagline
     }
 }
 

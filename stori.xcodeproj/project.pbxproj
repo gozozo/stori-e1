@@ -42,11 +42,11 @@
 		FDC112012CEEA0AC00C5F98E /* MovieDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC112002CEEA0AC00C5F98E /* MovieDetailRouter.swift */; };
 		FDC112032CEEA0E700C5F98E /* MovieDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC112022CEEA0E700C5F98E /* MovieDetailProtocols.swift */; };
 		FDC112062CEEA18D00C5F98E /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC112052CEEA18D00C5F98E /* MovieDetailViewController.swift */; };
-		FDC112082CEEA19B00C5F98E /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDC112072CEEA19B00C5F98E /* MovieDetailViewController.xib */; };
 		FDC1120A2CEEA23300C5F98E /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC112092CEEA23300C5F98E /* MovieDetailPresenter.swift */; };
 		FDC1120C2CEEA27900C5F98E /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1120B2CEEA27900C5F98E /* MovieDetailInteractor.swift */; };
 		FDC1120F2CEEB72800C5F98E /* VotesDateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDC1120D2CEEB72800C5F98E /* VotesDateView.xib */; };
 		FDC112102CEEB72800C5F98E /* VotesDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC1120E2CEEB72800C5F98E /* VotesDateView.swift */; };
+		FDC112142CEED93300C5F98E /* MovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDC112132CEED93300C5F98E /* MovieDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,12 +108,13 @@
 		FDC112002CEEA0AC00C5F98E /* MovieDetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailRouter.swift; sourceTree = "<group>"; };
 		FDC112022CEEA0E700C5F98E /* MovieDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailProtocols.swift; sourceTree = "<group>"; };
 		FDC112052CEEA18D00C5F98E /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
-		FDC112072CEEA19B00C5F98E /* MovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailViewController.xib; sourceTree = "<group>"; };
 		FDC112092CEEA23300C5F98E /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
 		FDC1120B2CEEA27900C5F98E /* MovieDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractor.swift; sourceTree = "<group>"; };
 		FDC1120D2CEEB72800C5F98E /* VotesDateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VotesDateView.xib; sourceTree = "<group>"; };
 		FDC1120E2CEEB72800C5F98E /* VotesDateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VotesDateView.swift; sourceTree = "<group>"; };
 		FDC112112CEEC1A500C5F98E /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		FDC112122CEED93300C5F98E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MovieDetailViewController.xib; sourceTree = "<group>"; };
+		FDC112152CEED93400C5F98E /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/MovieDetailViewController.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,7 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				FDC112052CEEA18D00C5F98E /* MovieDetailViewController.swift */,
-				FDC112072CEEA19B00C5F98E /* MovieDetailViewController.xib */,
+				FDC112132CEED93300C5F98E /* MovieDetailViewController.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -426,7 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDC112082CEEA19B00C5F98E /* MovieDetailViewController.xib in Resources */,
+				FDC112142CEED93300C5F98E /* MovieDetailViewController.xib in Resources */,
 				60FA861F2CEBD1380026B083 /* .env in Resources */,
 				60D7E3C62CEAAE8500EB222E /* Assets.xcassets in Resources */,
 				FD73BB552CEDBA3400654693 /* Roboto-Black.ttf in Resources */,
@@ -538,6 +539,15 @@
 				60FA861B2CEBCD420026B083 /* mul */,
 			);
 			name = MovieListViewController.xib;
+			sourceTree = "<group>";
+		};
+		FDC112132CEED93300C5F98E /* MovieDetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDC112122CEED93300C5F98E /* Base */,
+				FDC112152CEED93400C5F98E /* mul */,
+			);
+			name = MovieDetailViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

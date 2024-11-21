@@ -1,0 +1,211 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "4YX-RW-WVx.text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Original Language"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma original"
+          }
+        }
+      }
+    },
+    "6jf-mf-96A.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"$25,000,000.00\\n\\n\"; ObjectID = \"6jf-mf-96A\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "$25,000,000.00\n\n"
+          }
+        }
+      }
+    },
+    "99K-jn-c6H.configuration.title" : {
+      "comment" : "Class = \"UIButton\"; configuration.title = \"Share\"; ObjectID = \"99K-jn-c6H\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Share"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compartir"
+          }
+        }
+      }
+    },
+    "99K-jn-c6H.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Button\"; ObjectID = \"99K-jn-c6H\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Button"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compartir"
+          }
+        }
+      }
+    },
+    "AEL-wC-AOI.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.\"; ObjectID = \"AEL-wC-AOI\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope."
+          }
+        }
+      }
+    },
+    "brK-MD-msQ.text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overview"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resumen"
+          }
+        }
+      }
+    },
+    "JEh-mU-xrm.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"$28,341,469.00\\n\\n\"; ObjectID = \"JEh-mU-xrm\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "$28,341,469.00\n\n"
+          }
+        }
+      }
+    },
+    "KOb-ie-3wM.text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Revenue"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingresos"
+          }
+        }
+      }
+    },
+    "mtM-5g-6wT.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"The Shawshank Redemption\"; ObjectID = \"mtM-5g-6wT\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The Shawshank Redemption"
+          }
+        }
+      }
+    },
+    "Ose-DS-9Bh.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"US\"; ObjectID = \"Ose-DS-9Bh\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "US"
+          }
+        }
+      }
+    },
+    "phQ-JK-VQd.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"English\\n\\n\"; ObjectID = \"phQ-JK-VQd\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "English\n\n"
+          }
+        }
+      }
+    },
+    "qzH-Wv-S1g.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Released\"; ObjectID = \"qzH-Wv-S1g\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Released"
+          }
+        }
+      }
+    },
+    "RHA-8G-PQI.text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Status"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estado"
+          }
+        }
+      }
+    },
+    "W4e-GU-lxc.text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Budget"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Presupuesto"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
